@@ -19,10 +19,10 @@ For those not overly interested in the deep-dive, the **TL;DR** of these questio
 For those interested in the details, this analysis is broken into the following:
 
 - [Available data](#available-data)
-- [Metrics for analysing the cost of LEGO sets](#metrics-for-analysing-the-cost-of-LEGO-sets)
-- [Has LEGO gotten more expensive over time?](#time-analysis)
-- [Is their a noticeable premium paid on licensed sets?](#licensed-unlicensed)
-- [How does the cost of LEGO in Australia compare to other countries?](#cost-in-Australia)
+- [Metrics for analysing the cost of LEGO sets](#metrics-for-analysing-the-cost-of-lego-sets)
+- [Has LEGO gotten more expensive over time?](#has-lego-gotten-more-expensive-over-time?)
+- [Is their a noticeable premium paid on licensed sets?](#is-their-a-noticeable-premium-paid-on-licensed-sets)
+- [How does the cost of LEGO in Australia compare to other countries?](#how-does-the-cost-of-lego-in-Australia-compare-to-other-countries?)
 
 ## Available data
 
