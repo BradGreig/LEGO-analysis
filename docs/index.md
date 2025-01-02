@@ -19,7 +19,7 @@ For those not overly interested in the deep-dive, the **TL;DR** of these questio
 For those interested in the details, this analysis is broken into the following:
 
 - [Available data](#available-data)
-- [Metrics for analysing the cost of LEGO sets](#data-metrics)
+- [Metrics for analysing the cost of LEGO sets](#metrics-for-analysing-the-cost-of-LEGO-sets)
 - [Has LEGO gotten more expensive over time?](#time-analysis)
 - [Is their a noticeable premium paid on licensed sets?](#licensed-unlicensed)
 - [How does the cost of LEGO in Australia compare to other countries?](#cost-in-Australia)
@@ -35,7 +35,7 @@ To explore how the pricing of sets changes over time I decided to compare agains
 Across the various LEGO data sources above I had access to Australian, US, UK and German pricing. I grabbed the median salary information for each of these countries from their respective national statistics sources; the Australian Bureau of Statistics ([ABS](https://www.abs.gov.au/)), the US Bureau of Labor Statistics ([BLS](https://www.bls.gov/)), the office of National Statistics for the UK ([ONS](https://www.ons.gov.uk/])) and the Federal Statistics office for Germany ([Destatis](https://www.destatis.de/EN/Home/_node.html)).
 
 
-## data metrics
+## Metrics for analysing the cost of LEGO sets
 
 Common metrics
 
