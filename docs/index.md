@@ -12,9 +12,9 @@ On this page, I will explore this question and a few others regarding the cost o
 
 For those not overly interested in the deep-dive, the **TL;DR** of these questions are;
 
-- Yes and No. It depends on how you define it. Individual metrics commonly used such as cost per piece or cost per gram are fairly stable over time (decreasing when adjusted for median weekly salaries over time). However, the median size of sets has been steadily increasing (larger and more detailed) leading to, on average, higher retail prices for sets.
-- Yes!
-- Relatively speaking yes, although it is cheaper in US states with low sales tax.
+- **Yes and No**. It depends on how you define it. Individual metrics commonly used such as cost per piece or cost per gram are fairly stable over time (decreasing when adjusted for median weekly salaries over time). However, the median size of sets has been steadily increasing (larger and more detailed) leading to, on average, higher retail prices for sets.
+- **Yes!**
+- Relatively speaking **yes**, although it is cheaper in US states with low sales tax.
 
 For those interested in the details, this analysis is broken into the following:
 
@@ -40,6 +40,8 @@ Across the various LEGO data sources above I had access to Australian, US, UK an
 Common metrics
 
 ![Pieces vs Retail Price](https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_pieces.png?raw=true)
+
+<img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_pieces.png?raw=true" alt="Pieces vs Retail Price" width="100"/>
 
 ## Has LEGO gotten more expensive over time?
 
