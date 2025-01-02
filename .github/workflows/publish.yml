@@ -1,0 +1,11 @@
+name: publish
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: pip install mkdocs-material 
+      - run: mkdocs gh-deploy --force
