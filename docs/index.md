@@ -22,7 +22,7 @@ For those interested in the details, this analysis is broken into the following:
 - [Metrics for analysing the cost of LEGO sets](#metrics-for-analysing-the-cost-of-lego-sets)
 - [Has LEGO gotten more expensive over time?](#has-lego-gotten-more-expensive-over-time)
 - [Is their a noticeable premium paid on licensed sets?](#is-their-a-noticeable-premium-paid-on-licensed-sets)
-- [How does the cost of LEGO in Australia compare to other countries?](#how-does-the-cost-of-lego-in-Australia-compare-to-other-countries)
+- [How does the cost of LEGO in Australia compare to other countries?](#how-does-the-cost-of-lego-in-australia-compare-to-other-countries)
 
 ## Available data
 
@@ -38,6 +38,8 @@ Across the various LEGO data sources above I had access to Australian, US, UK an
 ## Metrics for analysing the cost of LEGO sets
 
 Common metrics
+
+![Pieces vs Retail Price](https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_pieces.png?raw=true)
 
 ## Has LEGO gotten more expensive over time?
 
