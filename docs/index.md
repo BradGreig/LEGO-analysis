@@ -107,7 +107,7 @@ However, if we use the set weight instead, this normalises for piece size. A set
 
 To investigate whether LEGO has gotten more expensive over time, we need to calculate our chosen metrics as a function of LEGO set release year. As outlined earlier, I chose the price per piece (PPP) and price per weight in grams (PPW) as the two metrics for completeness. Although, remember that the PPW is the better metric. 
 
-<img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/PPP_per_year.png?raw=true" alt="PPP over time" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/PPP_per_year.png?raw=true" alt="PPW over time" width="465"/> 
+<img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/PPP_per_year.png?raw=true" alt="PPP over time" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/PPW_per_year.png?raw=true" alt="PPW over time" width="465"/> 
 *<small>Evolution in the the price per piece (PPP) or the price per weight in grams (PPW) determined over 35 years of LEGO pricing information. The solid black curve is the determine PPP or PPW whereas the dashed black curve is corrected for historical inflation.</small>*
 
 Above, the two solid black curves are the mean PPP and PPW as a function of year for the 35 years of LEGO pricing information that I selected. Using the raw data, the price per piece (left panel) is fairly stable over time. For the price per weight (right panel) there is a very slight increase over 35 years, but nothing overly substantial.
@@ -115,6 +115,10 @@ Above, the two solid black curves are the mean PPP and PPW as a function of year
 However, using the raw pricing data over 35 years is not a true representation of the story. We need to take into account inflation, adjusting the price of LEGO over the years to account for the increase of goods and services over time. To estimate the impact of inflation I have chosen to use historical median weekly salary data. The reason for using this is that the cost of LEGO relative to salary data to me is a better representation of how expensive something is. That is, a $100 set in 1990 is a bigger hit to the hip pocket than a $100 set in 2024 owing to the increase in weekly salaries over 35 years (which are supposed to grow in proportion to inflation).
 
 The inflation corrected PPP and PPW are provided by the black dashed curve in the figure above. **These both conclusively show that over time both the PPP and PPW are decreasing with time. Therefore, according to PPP and PPW metrics, LEGO is cheaper than it has ever been!**
+
+### But is that the end of the story?
+
+
 
 ## Is their a noticeable premium paid on licensed sets?
 
