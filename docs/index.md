@@ -44,10 +44,7 @@ Common metrics
 </figure>
 
 <figure>
-  <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_pieces_corr.png?raw=true" alt="Pieces vs Retail Price Corrected" width="400"/> 
-  <figcaption>This is my caption text.</figcaption>
-  <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_weight_corr.png?raw=true" alt="Weight vs Retail Price Corrected" width="400"/>
-  <figcaption>This is my caption text.</figcaption>
+  <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_pieces_corr.png?raw=true" alt="Pieces vs Retail Price Corrected" width="400"/> <figcaption>This is my caption text.</figcaption> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_weight_corr.png?raw=true" alt="Weight vs Retail Price Corrected" width="400"/> <figcaption>This is my caption text.</figcaption>
 </figure>  
 
 ## Has LEGO gotten more expensive over time?
