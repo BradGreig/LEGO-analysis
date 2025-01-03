@@ -108,9 +108,9 @@ However, if we use the set weight instead, this normalises for piece size. A set
 To investigate whether LEGO has gotten more expensive over time, we need to calculate our chosen metrics as a function of LEGO set release year. As outlined earlier, I chose the price per piece (PPP) and price per weight in grams (PPW) as the two metrics for completeness. Although, remember that the PPW is the better metric. 
 
 <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/PPP_per_year.png?raw=true" alt="PPP over time" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/PPW_per_year.png?raw=true" alt="PPW over time" width="465"/> 
-*<small>Evolution in the the price per piece (PPP) or the price per weight in grams (PPW) determined over 35 years of LEGO pricing information. The solid black curve is the determine PPP or PPW whereas the dashed black curve is corrected for historical inflation.</small>*
+*<small>Evolution in the price per piece (PPP) or the price per weight in grams (PPW) determined over 35 years of LEGO pricing information. The solid black curve is the determine PPP or PPW whereas the dashed black curve is corrected for historical inflation.</small>*
 
-Above, the two solid black curves are the mean PPP and PPW as a function of year for the 35 years of LEGO pricing information that I selected. Using the raw data, the price per piece (left panel) is fairly stable over time. For the price per weight (right panel) there is a very slight increase over 35 years, but nothing overly substantial.
+Above, the two solid black curves are the mean PPP and PPW as a function of year for the 35 years of LEGO pricing information that I selected. Using the raw data, the price per piece (left panel) is fairly stable over time. For the price per weight (right panel) there is a very slight increase over 35 years, but nothing overly substantial. For example, between 2010 and 2024 the PPW has increased 10 \%. For a 1kg set, that would correspond to an increase of only $10 from $100 to $110. Insignificant compared to inflation which we will see next.
 
 However, using the raw pricing data over 35 years is not a true representation of the story. We need to take into account inflation, adjusting the price of LEGO over the years to account for the increase of goods and services over time. To estimate the impact of inflation I have chosen to use historical median weekly salary data. The reason for using this is that the cost of LEGO relative to salary data to me is a better representation of how expensive something is. That is, a $100 set in 1990 is a bigger hit to the hip pocket than a $100 set in 2024 owing to the increase in weekly salaries over 35 years (which are supposed to grow in proportion to inflation).
 
@@ -118,7 +118,30 @@ The inflation corrected PPP and PPW are provided by the black dashed curve in th
 
 ### But is that the end of the story?
 
+Rather than looking at specific cost metrics, we can also look directly at the median cost of a LEGO set as seen below. The solid black curve is the raw data, whereas the dashed curve is the inflation adjusted median price. In terms of median set cost, we can clearly see an increase over time. In the past 5 years, the median price has gone up from $60 to $80. This corresponds to an increase by 33\%.
 
+<img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Median_price_peryr.png?raw=true" alt="Median set price per year" width="465"/> 
+*<small>The median set price as a function of time.</small>*
+
+With respect to the inflation adjusted median price (dashed curve), it has consistently been decreasing until it becomes fairly stable after 2015 albeit with some sizeable fluctuations year on year. Importantly, there does still appear to be an upswing since 2020. Implying that the increase in set prices since 2020 observed in the unadjusted data is occuring at a rate faster than inflation. **Implying the median LEGO set price is increasing**.
+
+However, can we establish why it is increasing? We have already looked at the PPW and observed that it gradually increases in time. Now, lets look now at the median set weight as a function of time. This is shown in the left panel below. This oscillates over time, going through peaks and troughs, with two strong peaks in 1996 and 2006 (I have not investigated the sources of these). However, it has also steadily increased since 2015. Conveniently, the strong peak in 2006 corresponds in the dip in PPW (see the earlier figure). However, the increase since 2015 in the median set weight overlaps with the increasing PPW.
+
+<img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Median_weight_peryr.png?raw=true" alt="Median set weight over time" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Estimated_cost_peryr.png?raw=true" alt="Estimated cost over time" width="465"/> 
+*<small>Evolution in the median set weight as a function of time (left panel) and the estimated median set cost obtained by multiplying the PPW by the median set weight.</small>*
+
+To more clearly understand what is going on, we can estimate a median cost by multipling this median set weight (left panel above) by our PPW that we calculated earlier. This is shown in the right panel above. This overlaps strongly with our earlier estimated median set price (solid black curve).
+
+Earlier, we estimated an increase of 33\% in the median set price since 2020. Over this period the PPW only increases by just under 10\%, however, the median set weight has increased by almost 20\%. **Therefore the dominant contributor to the increasing median LEGO set cost is an increasing median set weight over the past 5 or so years.**
+
+Another way to look at this 
+
+<img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Histogram_price_peryr.png?raw=true" alt="Number of sets above 3kg" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Percentage_peryr.png?raw=true" alt="Percentage of sets above 3kg" width="465"/> 
+*<small>Insert caption</small>*
+
+### Summary of findings
+
+In summary, inflation adjusted price metrics are decreasing with time implying the price paid per piece or weight in grams is currently cheaper than ever. However, at the same time the median size of sets is currently increasing at a faster rate than the stable or decreasing cost metrics. Therefore, the median price of sets is currently increasing. That is, there are more larger and higher priced sets available than ever leading to higher median set prices.
 
 ## Is their a noticeable premium paid on licensed sets?
 
