@@ -37,10 +37,26 @@ Across the various LEGO data sources above I had access to Australian, US, UK an
 
 ## Metrics for analysing the cost of LEGO sets
 
-Common metrics
+When it comes to a metric to accurately quantify the perceived value of a LEGO set, the two common ones that come to mind are: (i) the price per piece (PPP) and (ii) the price per weight (PPW). These two are simply the retail price of the set divided by either the number of pieces in the set or the total weight of the set.
+
+To investigate these metrics further I compared them for the most recent 3 years of data (2022 - 2024). By selecting 3 years of data, I can increase the sample size of the sample subset to roughly 1000 sets while limiting the chance of any variation in prices over different years. For these I consider all themes of LEGO products, not specifically selecting certain themes (I will look into that later). Below, I show scatter plots for the PPP (left) and PPW (right)
 
 <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_pieces.png?raw=true" alt="Pieces vs Retail Price" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_weight.png?raw=true" alt="Weight vs Retail Price" width="465"/> 
-*<small>image caption</small>*
+*<small>**Left panel:** Scatter plot for 3 years of LEGO sets comparing retail price ($AUD) and number of pieces in the set. The dashed black line is the measured mean PPP for the entire sample. **Right panel:** Scatter plot for 3 years of LEGO sets comparing retail price ($AUD) and the weight of the set in grams. The dashed black line is the measured mean PPW. </small>*
+
+The reason for both the PPP and PPW being used as a common metric for describing the pricing of LEGO sets can readily be shown by the extremely high correlation coefficients ($\rho$). The correlation coefficient describes how strongly two variables (e.g. retail price and number of pieces) are correlated, with $\rho = 1$ corresponding to perfect correlation and $\rho = 0$ means no correlation. For our two cases, we have $\rho = 0.96$ for PPP and $\rho = 0.98$ for PPW. Both demonstrating almost perfect correlations, with PPW being slightly higher.
+
+To visualise the mean PPP and PPW, I have added the black dashed line. This is simply the measured PPP or PPW multiplied by the number of pieces or weight of the set to estimate an expected retail price.
+
+Despite both the PPP and PPW having extremely high correlation coefficients, we can immediately see larger scatter when considering the number of pieces (larger spread of blue points) compared to the weight of the set. To better quantify the level of scatter (or accuracy) of our mean PPP and PPW we can calculate the R$^{2}$ coefficient. This determines how good a fit the black dashed line is to our data. An R$^{2}$ of 1 means a perfect fit.
+
+For our two cases, we find R$^{2}=0.75$ for PPP and R$^{2}=0.90$ for PPW. This immediately demonstrates that using the price per weight (PPW) is the superior metric when analysing LEGO pricing as it is much more accurate at characterising the data.
+
+Importantly, despite the clear superiority of the PPW over the PPP, throughout the remainder of this analysis I will always provide both for completeness.
+
+### Why is the set weight better than the number of pieces for estimating the cost of LEGO?
+
+
 
 <figure>
   <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_pieces_corr.png?raw=true" alt="Pieces vs Retail Price Corrected" width="300"/> <figcaption>This is my caption text.</figcaption> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_weight_corr.png?raw=true" alt="Weight vs Retail Price Corrected" width="300"/> <figcaption>This is my caption text.</figcaption>
