@@ -54,13 +54,54 @@ For our two cases, we find R$^{2}=0.75$ for PPP and R$^{2}=0.90$ for PPW. This i
 
 Importantly, despite the clear superiority of the PPW over the PPP, throughout the remainder of this analysis I will always provide both for completeness.
 
-### Why is the set weight better than the number of pieces for estimating the cost of LEGO?
+### A deeper look at metrics involving pieces and weight
 
+Although we have established that the price per piece is the superior metric, we have done this based only on a single value (the R$^{2}$ coefficient). Therefore, it is worth looking deeper into how well do these metrics actually perform, and where the differences between the two metrics occur. 
 
+To investigate the data deeper, I will calculate the mean price of LEGO sets within fixed regions (bins) of either 1000 pieces or 1000 grams. Doing so highlights whether there is any variation (evolution) in the data for increasing the number of pieces/weight in a LEGO set. This will also highlight how good or poor a fixed PPP or PPW is. Below, I show this for the number of pieces (left) and set weight (right).
 
-<figure>
-  <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_pieces_corr.png?raw=true" alt="Pieces vs Retail Price Corrected" width="300"/> <figcaption>This is my caption text.</figcaption> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_weight_corr.png?raw=true" alt="Weight vs Retail Price Corrected" width="300"/> <figcaption>This is my caption text.</figcaption>
-</figure>  
+<img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_pieces_corr.png?raw=true" alt="Pieces vs Retail Price Corrected" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_weight_corr.png?raw=true" alt="Weight vs Retail Price Corrected" width="465"/> 
+*<small> The same as above, except with the red datapoints highlighting the mean retail price being calculated in regions (bins) seperated by 1000 pieces (left panel) or 1000 grams (right panel). The error bars highlight the scatter within each bin. The red dashed line provides an alternative method to fit the data, using a linear function rather than a single value (e.g. PPP or PPW).</small>*
+
+Here, the red datapoints highlight how the mean retail price varies as the size/weight of the LEGO set increases. On each datapoint I also show the error bar, which highlights the amount of scatter within each bin.
+
+Beginning with the number of pieces in a set (left panel), we can clearly see that using a single metric (PPP) to represent the data is quite poor. As we consider sets with larger pieces, the red datapoints deviate further from the mean PPP. This explains why the R$^{2}$ coefficient was not particularly high (e.g. 0.75). Therefore, a simple PPP is not a very good measure.
+
+On the right hand side, I consider the same for the weight of a LEGO set. Here, the binned data much more closely follows the mean PPW (black dashed curve). This demonstrates why the PPW was a considerably better metric. However, like for the PPP, the binned data clearly deviates by an increasing amount from the mean PPW for increasing set weights. Showing that simple metrics such as PPP or PPW are not universally capable of describing all the data.
+
+### The problem with a single number for a metric
+
+The benefit of a single number metric such as a PPP or PPW is the ease with which it can be interpreted. A single price per piece or gram of LEGO can be easily understood. However, as I have showed, they are not the most accurate when fitting the full range of data. This is because they fundamentally assume that the trends in the data are universal.
+
+For our data, this is problematic owing to the distribution of LEGO sets. As can be seen from the figures above, the vast majority of sets contain less than 1500 pieces or are less than 2 kg. Therefore, when computing the PPP or PPW, we are effectively calculating a mean PPP for sets less than 1500 pieces and assuming it extends for any number of pieces (equally for the weight). 
+
+To better handle this, we can instead fit the data with a slightly expanded linear function. Theoretically, we could also go to even more complex functions, however, that does not seem necessary given the data. Earlier, when calculating the PPP or PPW we are assuming the following functional form;
+$$
+y = m \times x,
+$$
+where $y$ is the retail price, $m$ is our PPP or PPW and $x$ is the number of pieces or the weight of the set in grams. This function is quite rigid, in only providing one free parameter to determine ($m$). 
+
+We can simply improve on this by adding an additional variable,
+$$
+y = m \times x + c,
+$$
+where $c$ is a vertical offset. 
+
+This functional form is shown as the red dashed lines in the figure above. We can clearly see that this functional form is a much better fit to our data, by following the red data points much more closely (the red line is not fit to the red data points).
+
+By adopting this functional form, the R$^{2}$ for the number of pieces in a set increases from 0.75 to 0.84, demonstrating the considerable improvement achievable. For the weight of the set, R$^{2}$ improves from 0.91 to 0.93. The larger improvement for the number of pieces relative to the weight is simply due to the PPP being considerably worse than the PPW. That is, PPW was already pretty good, so we do not improve as much compared to PPP.
+
+### The downside of increased complexity
+
+Although increasing the complexity of the model improves the fit to the data, which is always preferable, for our study into the evolution of LEGO pricing over the years it will make things a little more difficult to interpret. Rather than following how a single value (PPP or PPW) changes as a function of time (year) we will have to track two properties (the gradient, $m$ and the offset, $c$). Secondly, the offset does not have any real meaning. Additionally, while the gradient will still be a measure of price per piece or price per weight (gram), its value will correlate with the offset, $c$, therefore it will not be as clear to interpret.
+
+As a result, despite improving the fit to the data, for the remainder of this specific analysis I will only consider the simpler PPP or PPW. Maybe in future, I will consider revisiting this will more complexity. Although, I do not think it is really necessary.
+
+### Why is LEGO set weight better than the number of pieces for estimating retail price?
+
+Quite simply this is because assuming a fixed price per piece is not a fair representation of the production costs of LEGO. For example, a single 1x1 stud cannot be thought of as costing the same as a 2x4 block or 1x12 Technic beam. In fact, in recent years LEGO has introduced themes (e.g. LEGO Art or Dots), which predominately use only coloured 1x1 studs. Further, Technic sets require a large number of small pins and rods for improving structural integrity. In both cases, this can quickly inflate the piece counts of sets. If a fixed price per piece was used, these sets would be very expensive. 
+
+However, if we use the set weight instead, this normalises for piece size. A set with a large number of small pieces will weigh a lot less than a set with larger pieces. This is why the set weight is a much better metric for estimating LEGO pricing. Heavy sets are more expensive than ligher sets. While sets with large numbers of pieces are not necessarily more expensive.
 
 ## Has LEGO gotten more expensive over time?
 
