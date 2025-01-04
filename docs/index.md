@@ -1,4 +1,4 @@
-I am a huge LEGO fan and have spent a non-trivial amount of money purchasing LEGO sets that I find interesting. Being such a fan, a common thing that I hear is that people find purchasing LEGO to be expensive. Following on, people also believe that LEGO has gotten more expensive in recent times.
+I am a huge LEGO fan. Being such a fan, a common thing that I hear is that people find purchasing LEGO to be expensive. Following on, people also believe that LEGO has gotten more expensive in recent times.
 
 For quite some time I have been meaning to delve into available data on the cost of LEGO sets to explore whether it is in fact getting more expensive. Finally I have gotten around to it.
 
@@ -10,7 +10,7 @@ On this page, I will explore this question and a few others regarding the cost o
 
 For those not overly interested in the deep-dive, the **TL;DR** of these questions are;
 
-- **Yes and No**. It depends on how you define it. Individual metrics commonly used such as cost per piece or cost per gram are fairly stable over time (decreasing when adjusted for median weekly salaries over time). However, the median size of sets has been steadily increasing (larger and more detailed) leading to, on average, higher retail prices for sets.
+- **Yes and No**. It depends on how you define it. Individual metrics commonly used such as cost per piece or cost per gram are fairly stable over time (decreasing when adjusted for median weekly salaries). However, the median size of sets has been steadily increasing (both in terms of weight and number of pieces) leading to, on average, higher retail prices for sets.
 - **Yes!**
 - Relatively speaking **yes**, although it is cheaper in US states with low sales tax.
 
@@ -35,9 +35,9 @@ Across the various LEGO data sources above I had access to Australian, US, UK an
 
 ## Metrics for analysing the cost of LEGO sets
 
-When it comes to a metric to accurately quantify the perceived value of a LEGO set, the two common ones that come to mind are: (i) the price per piece (PPP) and (ii) the price per weight (PPW). These two are simply the retail price of the set divided by either the number of pieces in the set or the total weight of the set.
+When it comes to a metric to accurately quantify the perceived value of a LEGO set, the two common ones that come to mind are: (i) the price per piece (PPP) and (ii) the price per weight (PPW) in grams. These two are simply the retail price of the set divided by either the number of pieces in the set or the total weight of the set in grams.
 
-To investigate these metrics further I compared them for the most recent 3 years of data (2022 - 2024). By selecting 3 years of data, I can increase the sample size of the sample subset to roughly 1000 sets while limiting the chance of any variation in prices over different years. For these I consider all themes of LEGO products, not specifically selecting certain themes (I will look into that later). Below, I show scatter plots for the PPP (left) and PPW (right)
+To investigate these metrics further I compared them for the most recent 3 years of data (2022 - 2024). By selecting 3 years of data, I can increase the sample size of the sample subset to roughly 1000 sets while limiting the chance of any variation in prices over different years (e.g. due to inflation). For these I consider all themes of LEGO products, not specifically selecting certain themes (I will look into that later). Below, I show scatter plots for the PPP (left) and PPW (right)
 
 <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_pieces.png?raw=true" alt="Pieces vs Retail Price" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_weight.png?raw=true" alt="Weight vs Retail Price" width="465"/> 
 *<small>**Left panel:** Scatter plot for 3 years of LEGO sets comparing retail price (\$AUD) and number of pieces in the set. The dashed black line is the measured mean PPP for the entire sample. **Right panel:** Scatter plot for 3 years of LEGO sets comparing retail price ($AUD) and the weight of the set in grams. The dashed black line is the measured mean PPW. </small>*
@@ -54,7 +54,7 @@ Importantly, despite the clear superiority of the PPW over the PPP, throughout t
 
 ### A deeper look at metrics involving pieces and weight
 
-Although we have established that the price per piece is the superior metric, we have done this based only on a single value (the R$^{2}$ coefficient). Therefore, it is worth looking deeper into how well do these metrics actually perform, and where the differences between the two metrics occur. 
+Although we have established that the price per piece is the superior metric, we have done this based only on a single value (the R$^{2}$ coefficient). Therefore, it is worth looking deeper into how well these metrics actually perform, and where the differences between the two metrics occur. 
 
 To investigate the data deeper, I will calculate the mean price of LEGO sets within fixed regions (bins) of either 1000 pieces or 1000 grams. Doing so highlights whether there is any variation (evolution) in the data for increasing the number of pieces/weight in a LEGO set. This will also highlight how good or poor a fixed PPP or PPW is. Below, I show this for the number of pieces (left) and set weight (right).
 
@@ -65,7 +65,7 @@ Here, the red datapoints highlight how the mean retail price varies as the size/
 
 Beginning with the number of pieces in a set (left panel), we can clearly see that using a single metric (PPP) to represent the data is quite poor. As we consider sets with larger pieces, the red datapoints deviate further from the mean PPP. This explains why the R$^{2}$ coefficient was not particularly high (e.g. 0.75). Therefore, a simple PPP is not a very good measure.
 
-On the right hand side, I consider the same for the weight of a LEGO set. Here, the binned data much more closely follows the mean PPW (black dashed curve). This demonstrates why the PPW was a considerably better metric. However, like for the PPP, the binned data clearly deviates by an increasing amount from the mean PPW for increasing set weights. Showing that simple metrics such as PPP or PPW are not universally capable of describing all the data.
+On the right hand side, I consider the same for the weight of a LEGO set. Here, the binned data much more closely follows the mean PPW (black dashed curve). This demonstrates why the PPW was a considerably better metric. Further highlight why the PPW is better, is the considerably smaller error bars (reduced scatter relative to PPP). However, like for the PPP, the binned data clearly deviates by an increasing amount from the mean PPW for increasing set weights. Showing that simple metrics such as PPP or PPW are not universally capable of describing all the data.
 
 ### The problem with a single number for a metric
 
@@ -77,7 +77,7 @@ To better handle this, we can instead fit the data with a slightly expanded line
 $$
 y = m \times x,
 $$
-where $y$ is the retail price, $m$ is our PPP or PPW and $x$ is the number of pieces or the weight of the set in grams. This function is quite rigid, in only providing one free parameter to determine ($m$). 
+where $y$ is the retail price, $m$ is our PPP or PPW and $x$ is the number of pieces or the weight of the set in grams. This function is quite rigid, in only providing one free parameter to determine (e.g. $m$). 
 
 We can simply improve on this by adding an additional variable,
 $$
@@ -106,9 +106,9 @@ However, if we use the set weight instead, this normalises for piece size. A set
 To investigate whether LEGO has gotten more expensive over time, we need to calculate our chosen metrics as a function of LEGO set release year. As outlined earlier, I chose the price per piece (PPP) and price per weight in grams (PPW) as the two metrics for completeness. Although, remember that the PPW is the better metric. 
 
 <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/PPP_per_year.png?raw=true" alt="PPP over time" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/PPW_per_year.png?raw=true" alt="PPW over time" width="465"/> 
-*<small>Evolution in the price per piece (PPP) or the price per weight in grams (PPW) determined over 35 years of LEGO pricing information. The solid black curve is the determine PPP or PPW whereas the dashed black curve is corrected for historical inflation.</small>*
+*<small>Evolution in the price per piece (PPP) or the price per weight in grams (PPW) determined over 35 years of LEGO pricing information. The solid black curve is the determined PPP or PPW whereas the dashed black curve is corrected for historical inflation.</small>*
 
-Above, the two solid black curves are the mean PPP and PPW as a function of year for the 35 years of LEGO pricing information that I selected. Using the raw data, the price per piece (left panel) is fairly stable over time. For the price per weight (right panel) there is a very slight increase over 35 years, but nothing overly substantial. For example, between 2010 and 2024 the PPW has increased 10%. For a 1kg set, that would correspond to an increase of only $10 from $100 to $110. Insignificant compared to inflation which we will see next.
+Above, the two solid black curves are the median PPP and PPW as a function of year for the 35 years of LEGO pricing information that I selected. Using the raw data, the price per piece (left panel) is fairly stable over time. For the price per weight (right panel) there is a very slight increase over 35 years, but nothing overly substantial. For example, between 2010 and 2024 the PPW has increased 10%. For a 1kg set, that would correspond to an increase of only $10 from $100 to $110. Insignificant compared to inflation which we will see next.
 
 However, using the raw pricing data over 35 years is not a true representation of the story. We need to take into account inflation, adjusting the price of LEGO over the years to account for the increase of goods and services over time. To estimate the impact of inflation I have chosen to use historical median weekly salary data. The reason for using this is that the cost of LEGO relative to salary data to me is a better representation of how expensive something is. That is, a $100 set in 1990 is a bigger hit to the hip pocket than a $100 set in 2024 owing to the increase in weekly salaries over 35 years (which are supposed to grow in proportion to inflation).
 
@@ -141,7 +141,7 @@ Rather than the total number of large sets, we can also look at the percentage o
 
 ### Summary of findings
 
-In summary, inflation adjusted price metrics are decreasing with time implying the price paid per piece or weight in grams of LEGO are currently the cheapest they have ever been. However, the median size of sets is currently increasing at a faster rate than these stable or decreasing cost metrics (adjusted for inflation). This has led to an increase in the median cost of LEGO sets. In short, this leads to higher retail price of sets. Giving the appearance that LEGO has become more expensive.
+Inflation adjusted price metrics are decreasing with time implying the price paid per piece or weight in grams of LEGO are currently the cheapest they have ever been. However, the median size of sets is currently increasing at a faster rate than these stable or decreasing cost metrics (adjusted for inflation). This has led to an increase in the median cost of LEGO sets. In short, this leads to higher retail price of sets. Giving the appearance that LEGO has become more expensive.
 
 However, this is purely driven by LEGO releasing more large sets (by weight and by pieces) year on year. So while the retail prices are higher, these LEGO sets also contain more pieces and/or weigh more.
 
@@ -151,20 +151,21 @@ Another thing I have been curious about is whether there is a discernible price 
 
 To investigate this, I return to the same 3yr (2002 - 2024) LEGO set data that I used earlier for investigating the different LEGO price metrics (price per piece and price per weight in grams). I then split this dataset into two smaller datasets, separating licensed themes from unlicensed themes.
 
-For the purposes of this investigation, I have considered the following two sets of licensed/unlicensed sets;
+For the purposes of this investigation, I have considered the following two groups of licensed/unlicensed sets;
+
 - **Licensed:** Star Wars, Disney, Marvel and DC, Harry Potter, Minecraft, Super Mario, Jurassic World, Sonic and Avatar
 - **Unlicensed:** City, Creator, Friends, Classic, Dreamzzz, Ninjago, Seasonal, Monkie Kid and Dots
 
-Importantly, I have excluded the Technic, Ideas, Icons, BrickHeadz and LEGO art themes as these ranges can contain a mix of licensed/unlicensed products. While these could be separated, it could easily be more prone to error.
+Importantly, I have excluded the Technic, Ideas, Icons, BrickHeadz and LEGO art themes as these ranges can contain a mix of licensed/unlicensed products. While these could be separated, it could more easily be prone to errors.
 
-In order to establish whether there is a discernible difference between licensed and unlicensed themes I computed histograms of the PPP and PPW for all sets from themes listed above. Below, in the left panel I have the two histograms from the unlicensed (blue) and licensed (red) sets for the PPP and in the right panel the histograms for PPW.
+In order to establish whether there is a discernible difference between licensed and unlicensed themes I computed histograms of the PPP and PPW for all sets from the themes listed above. Below, in the left panel I have the two histograms from the unlicensed (blue) and licensed (red) sets for the PPP and in the right panel the histograms for PPW.
 
 <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/piece_licensed.png?raw=true" alt="Licensed sets by PPP" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/weight_licensed.png?raw=true" alt="Licensed sets by PPW" width="465"/> 
 *<small>Distribution of Licensed and Unlicensed sets according to PPP (left) and PPW (right).</small>*
 
 Quite clearly, for both cost metrics there is a discernible difference, with licensed sets clearly having higher PPP or PPW metrics (the distributions offset further to the right). The vertical coloured dashed lines denote the median of the two histograms to more easily visualise the difference between licensed and unlicensed sets. According to this, licensed sets have a 23% higher price per piece (3.4 cents) or 21% higher price per weight in grams (2.2 cents).
 
-**Therefore, definitively licensed sets are more expensive**, by about 20%. However, this is not too surprising. I was just curious if it was immediately obvious from the data.
+**Therefore, licensed sets are definitely more expensive**, by about 20%. However, this is not too surprising. I was just curious if it was immediately obvious from the data.
 
 ### A more detailed look
 
@@ -173,26 +174,26 @@ Above, we considered just a binary licensed/unlicensed classification for the LE
 <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/theme_pieces.png?raw=true" alt="Individual themes by PPP" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/theme_weight.png?raw=true" alt="Individual themes by PPW" width="465"/> 
 *<small>Box and whisker plots showing the distribution of PPP (left panel) and PPW (right panel) for individual LEGO themes over a 3yr period (2022-2024). Blue corresponds to unlicensed sets, red to licensed sets and black to sets not assigned a classification.</small>*
 
-A box and whisker plot is an easy to understand visual representation of a histogram (or probability distribution). The two whiskers (at the two extremes) correspond to the 10 and 90 percentiles of the histogram (that is, include 80% of all sets). The box highlights the central 25th and 75th percentiles (including the central 50% of all sets). The vertical line in the centre of the box is the median. Wide boxes imply broad histograms (large spread) while narrow boxes imply narrow histograms (small spread).
+A box and whisker plot is an easy to understand visual representation of a histogram (or probability distribution). The two whiskers (at the two extremes) correspond to the 10 and 90 percentiles of the histogram (that is, these bounds include 80% of all sets). The box highlights the central 25th and 75th percentiles (including the central 50% of all sets). The vertical line in the centre of the box is the median. Wide boxes imply broad histograms (large spread) while narrow boxes imply narrow histograms (small spread).
 
-Representing all themes individually in this way, it is clear which sets have higher/lower cost metrics relative to the median of the entire data set. Unsurprisingly, the licensed sets are predominately above the median of the data set (owing to the premium paid that we identified above). The worst culprits being Star Wars, Marvel and Jurassic World.
+Representing all themes individually in this way, it is clear which sets have higher/lower cost metrics relative to the median of the entire data set. Unsurprisingly, the licensed sets are predominately above the median of the data set (owing to the premium paid that we identified above). The most expensive themes being Star Wars, Marvel and Jurassic World.
 
 ## How does the cost of LEGO in Australia compare to other countries?
 
 Finally, I thought it would be interesting to see if I could determine whether LEGO is cheaper or more expensive here in Australia. For the data that I extracted from the data sources above, I have seemingly reliable information for the US, UK and Germany back to 2010. I have reliable data way back to 1990 for Australia which was used earlier. 
 
-The way I decided to investigate this was to compare the cost of LEGO sets relative to the median weekly salary. A LEGO set is considered cheap if this ratio is small, as it represents a small fraction of a persons median salary. Conversely, a set is expensive it is a large fraction of a take home salary.
+The way I decided to investigate this was to compare the cost of LEGO sets relative to the median weekly salary. A LEGO set is considered cheap if this ratio is small, as it represents a small fraction of a persons median salary. Conversely, a set is considered expensive if it is a large fraction of a take home salary.
 
 There are two primary advantages for considering the data in this way; (i) this normalises the data across the various currencies as the cost is simply a fraction of a salary, so no longer dependent on foreign exchange rates between different countries and (ii) it essentially adjusts for inflation (taking into account that salaries were smaller in the past).
 
-Importantly, for the figures shown below, the actual numbers on the vertical (y) axis are irrelevant as they are very small quantities (price per piece/gram divided my median salary is a small number). What is relevant, is the amplitude of the line. The lower the line, the cheaper LEGO is in a country.
+Importantly, for the figures shown below, the actual numbers on the vertical (y) axis are irrelevant as they are very small quantities (price per piece/gram divided my median salary is a small number). What is relevant, is the trend and amplitude of the line. The lower the line, the cheaper LEGO is in that country.
 
-<img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Country_cost_PPP.png?raw=true" alt="PPP by country" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Country_cost_PPP.png?raw=true" alt="PPW by country" width="465"/> 
+<img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Country_cost_PPP.png?raw=true" alt="PPP by country" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Country_cost_PPW.png?raw=true" alt="PPW by country" width="465"/> 
 *<small>A metric to quantify how expensive LEGO is between different countries. Measured as the median PPP (left panel) or PPW (right panel) relative to the median weekly salary within each country.</small>*
 
-Note, LEGO sets in Australia (10% GST), the UK (20% VAT) and Germany (19% VAT) have tax included in the retail price of LEGO sets, whereas the US does not (as the sales tax differs on a state by state basis). To account for this, for the US I provide a grey shaded box with the lower bound corresponding to a 0% sales tax and the upper bound being a 10% sales tax.
+Note, LEGO in Australia (10% GST), the UK (20% VAT) and Germany (19% VAT) have tax included in the retail price of LEGO sets, whereas the US does not (as the sales tax differs on a state by state basis). To account for this, for the US I provide a grey shaded box with the lower bound corresponding to a 0% sales tax and the upper bound being a 10% sales tax.
 
-Immediately, LEGO appears to be more expensive in the UK (red line) than in all other countries I have considered. Primarily this is due to the lower salaries earnt in the UK relative to other countries. LEGO in Germany (blue) and Australia (green and gold, of course!) are fairly comparable, with Germany being marginally lower (cheaper).
+Immediately, LEGO appears to be more expensive in the UK (red line) than in all other countries I have considered. Primarily this is due to the lower salaries earnt in the UK relative to other countries. LEGO in Germany (blue) and Australia (green and gold, of course!) are fairly comparable, with Germany being very marginally lower (cheaper).
 
 LEGO in Germany and Australia appears to be roughly comparable to US states with 5-6% sales tax. Therefore, any US state with lower sales tax will be the cheapest location to purchase LEGO. However, only 10 US states have sales taxes below 5-6%. Therefore, on average purchasing LEGO in the US is more expensive than in Australia or Germany. These conclusions appear to be broadly consistent with an analysis I just [found](https://bricknerd.com/home/which-country-has-the-cheapest-lego-9-28-23), although using a completely different methodology.
 
