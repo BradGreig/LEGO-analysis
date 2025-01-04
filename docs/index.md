@@ -1,5 +1,3 @@
-## Overview
-
 I am a huge LEGO fan and have spent a non-trivial amount of money purchasing LEGO sets that I find interesting. Being such a fan, a common thing that I hear is that people find purchasing LEGO to be expensive. Following on, people also believe that LEGO has gotten more expensive in recent times.
 
 For quite some time I have been meaning to delve into available data on the cost of LEGO sets to explore whether it is in fact getting more expensive. Finally I have gotten around to it.
