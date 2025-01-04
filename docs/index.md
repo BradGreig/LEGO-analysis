@@ -145,7 +145,14 @@ In summary, inflation adjusted price metrics are decreasing with time implying t
 
 ## Is their a noticeable premium paid on licensed sets?
 
-Noticeable bias
+<img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/piece_licensed.png?raw=true" alt="Licensed sets by PPP" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/weight_licensed.png?raw=true" alt="Licensed sets by PPW" width="465"/> 
+*<small>Distribution of Licensed and Unlicensed sets according to PPP (left) and PPW (right).</small>*
+
+### More detailed look
+
+<img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/theme_pieces.png?raw=true" alt="Individual themes by PPP" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/theme_weight.png?raw=true" alt="Individual themes by PPW" width="465"/> 
+*<small>Box and whisker plots showing the distribution of PPP (left panel) and PPW (right panel) for individual LEGO themes over a 3yr period (2022-2024). Blue corresponds to unlicensed sets, red to licensed sets and black to sets not assigned a classification.</small>*
+
 
 ## How does the cost of LEGO in Australia compare to other countries?
 
