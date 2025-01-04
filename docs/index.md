@@ -26,9 +26,9 @@ For those interested in the details, this analysis is broken into the following:
 
 ## Available data
 
-There are multiple excellent websites hosting databases of historial information about released LEGO sets. For this exploration I have used three main sources; [Brickset](https://brickset.com/), [BrickLink](https://www.bricklink.com/v2/main.page) and [BrickEconomy](https://www.brickeconomy.com/). I have been most familiar with Brickset, which dictated that choice. I found BrickLink had a more comprehensive database when it came to information about a LEGO sets weight. Finally, BrickEconomy had easily obtainable Australian pricing information.
+There are multiple excellent websites hosting databases of historical information about released LEGO sets. For this exploration I have used three main sources; [Brickset](https://brickset.com/), [BrickLink](https://www.bricklink.com/v2/main.page) and [BrickEconomy](https://www.brickeconomy.com/). I have been most familiar with Brickset, which dictated that choice. I found BrickLink had a more comprehensive database when it came to information about a LEGO sets weight. Finally, BrickEconomy had easily obtainable Australian pricing information.
 
-As this exploration is focused on pricing information, I restricted my dataset to only include sets sold at retail. That is, excluding special sets (gifts with purchase) or BrickLink sets. Further, I also restict the dataset to sets with a minimum of 100 pieces. Finally, I consider sets from 1990 until 2024. In total, this leads to a dataset of roughly 5500 unique sets.
+As this exploration is focused on pricing information, I restricted my dataset to only include sets sold at retail. That is, excluding special sets (gifts with purchase) or BrickLink sets. Further, I also restrict the dataset to sets with a minimum of 100 pieces. Finally, I consider sets from 1990 until 2024. In total, this leads to a dataset of roughly 5500 unique sets.
 
 To explore how the pricing of sets changes over time I decided to compare against the median salary in Australia (and a few other countries). One could adjust the historical pricing data for inflation using something like the consumer price index, however, I decided instead to use actual salary information. The reason for this choice is that wage growth does not necessarily follow inflation (e.g. inflation is currently outpacing wage growth in Australia). Therefore, by using actual salary information I can effectively compare the cost of LEGO as a fraction of take home salary. Importantly, although I have not checked, I am fairly confident that using inflation instead of salary information would produce fairly similar results.
 
@@ -110,7 +110,7 @@ To investigate whether LEGO has gotten more expensive over time, we need to calc
 <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/PPP_per_year.png?raw=true" alt="PPP over time" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/PPW_per_year.png?raw=true" alt="PPW over time" width="465"/> 
 *<small>Evolution in the price per piece (PPP) or the price per weight in grams (PPW) determined over 35 years of LEGO pricing information. The solid black curve is the determine PPP or PPW whereas the dashed black curve is corrected for historical inflation.</small>*
 
-Above, the two solid black curves are the mean PPP and PPW as a function of year for the 35 years of LEGO pricing information that I selected. Using the raw data, the price per piece (left panel) is fairly stable over time. For the price per weight (right panel) there is a very slight increase over 35 years, but nothing overly substantial. For example, between 2010 and 2024 the PPW has increased 10 \%. For a 1kg set, that would correspond to an increase of only $10 from $100 to $110. Insignificant compared to inflation which we will see next.
+Above, the two solid black curves are the mean PPP and PPW as a function of year for the 35 years of LEGO pricing information that I selected. Using the raw data, the price per piece (left panel) is fairly stable over time. For the price per weight (right panel) there is a very slight increase over 35 years, but nothing overly substantial. For example, between 2010 and 2024 the PPW has increased 10%. For a 1kg set, that would correspond to an increase of only $10 from $100 to $110. Insignificant compared to inflation which we will see next.
 
 However, using the raw pricing data over 35 years is not a true representation of the story. We need to take into account inflation, adjusting the price of LEGO over the years to account for the increase of goods and services over time. To estimate the impact of inflation I have chosen to use historical median weekly salary data. The reason for using this is that the cost of LEGO relative to salary data to me is a better representation of how expensive something is. That is, a $100 set in 1990 is a bigger hit to the hip pocket than a $100 set in 2024 owing to the increase in weekly salaries over 35 years (which are supposed to grow in proportion to inflation).
 
@@ -118,47 +118,87 @@ The inflation corrected PPP and PPW are provided by the black dashed curve in th
 
 ### But is that the end of the story?
 
-Rather than looking at specific cost metrics, we can also look directly at the median cost of a LEGO set as seen below. The solid black curve is the raw data, whereas the dashed curve is the inflation adjusted median price. In terms of median set cost, we can clearly see an increase over time. In the past 5 years, the median price has gone up from $60 to $80. This corresponds to an increase by 33\%.
+Rather than looking at specific cost metrics, we can also look directly at the median cost of a LEGO set as seen below. The solid black curve is the raw data, whereas the dashed curve is the inflation adjusted median price. In terms of median set cost, we can clearly see an increase over time. In the past 5 years, the median price has gone up from $60 to $80. This corresponds to an increase by 33%.
 
-<img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Median_price_peryr.png?raw=true" alt="Median set price per year" width="465"/> 
+![Median set price per year](https://github.com/BradGreig/LEGO-analysis/blob/main/data/Median_price_peryr.png?raw=true")
 *<small>The median set price as a function of time.</small>*
 
-With respect to the inflation adjusted median price (dashed curve), it has consistently been decreasing until it becomes fairly stable after 2015 albeit with some sizeable fluctuations year on year. Importantly, there does still appear to be an upswing since 2020. Implying that the increase in set prices since 2020 observed in the unadjusted data is occuring at a rate faster than inflation. **Implying the median LEGO set price is increasing**.
+With respect to the inflation adjusted median price (dashed curve), it has consistently been decreasing until it becomes fairly stable after 2015 albeit with some sizeable fluctuations year on year. Importantly, there does still appear to be an upswing since 2020. Implying that the increase in set prices since 2020 observed in the unadjusted data is occurring at a rate faster than inflation. **Implying the median LEGO set price is increasing**.
 
-However, can we establish why it is increasing? We have already looked at the PPW and observed that it gradually increases in time. Now, lets look now at the median set weight as a function of time. This is shown in the left panel below. This oscillates over time, going through peaks and troughs, with two strong peaks in 1996 and 2006 (I have not investigated the sources of these). However, it has also steadily increased since 2015. Conveniently, the strong peak in 2006 corresponds in the dip in PPW (see the earlier figure). However, the increase since 2015 in the median set weight overlaps with the increasing PPW.
+However, can we establish why it is increasing? We have already looked at the PPW and observed that it gradually increases in time. Now, lets look now at the median set weight as a function of time. This is shown in the left panel below. This oscillates over time, going through peaks and troughs, with two strong peaks in 1996 and 2006 (I have not investigated the sources of these, but they are likely due to smaller numbers of sets released in those years relative to later years). However, it has also steadily increased since 2015. Conveniently, the strong peak in 2006 corresponds in the dip in PPW (see the earlier figure). However, the increase since 2015 in the median set weight overlaps with the increasing PPW.
 
 <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Median_weight_peryr.png?raw=true" alt="Median set weight over time" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Estimated_cost_peryr.png?raw=true" alt="Estimated cost over time" width="465"/> 
 *<small>Evolution in the median set weight as a function of time (left panel) and the estimated median set cost obtained by multiplying the PPW by the median set weight.</small>*
 
-To more clearly understand what is going on, we can estimate a median cost by multipling this median set weight (left panel above) by our PPW that we calculated earlier. This is shown in the right panel above. This overlaps strongly with our earlier estimated median set price (solid black curve).
+To more clearly understand what is going on, we can estimate a median cost by multiplying this median set weight (left panel above) by our PPW that we calculated earlier. This is shown in the right panel above. This overlaps strongly with our earlier estimated median set price (solid black curve).
 
-Earlier, we estimated an increase of 33\% in the median set price since 2020. Over this period the PPW only increases by just under 10\%, however, the median set weight has increased by almost 20\%. **Therefore the dominant contributor to the increasing median LEGO set cost is an increasing median set weight over the past 5 or so years.**
+Earlier, we estimated an increase of 33% in the median set price since 2020. Over this period the PPW only increases by just under 10%, however, the median set weight has increased by almost 20%. **Therefore the dominant contributor to the increasing median LEGO set cost is an increasing median set weight over the past 5 or so years.**
 
-Another way to look at this 
+Another way to look at this is to investigate the number of sets released year on year above a certain weight. In the left panel below I have created a histogram of all sets above 3kg released since 1990. As can be seen, the number of large sets have considerably increased over the years. Last year alone, there were 23 sets above 3kg.
 
 <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Histogram_price_peryr.png?raw=true" alt="Number of sets above 3kg" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Percentage_peryr.png?raw=true" alt="Percentage of sets above 3kg" width="465"/> 
-*<small>Insert caption</small>*
+*<small>The number of sets released each year above 3kg (left panel) and the percentage of all LEGO sets released each year above 3kg (right panel). </small>*
+
+Rather than the total number of large sets, we can also look at the percentage of large sets (above 3kg) released in a year relative to all sets released in that year. This is shown in the right panel above. Since 2010, the percentage of large sets have steadily increased. Earlier than 2010 the trend is less reliable owing to the considerably fewer sets released in a single year.
 
 ### Summary of findings
 
-In summary, inflation adjusted price metrics are decreasing with time implying the price paid per piece or weight in grams is currently cheaper than ever. However, at the same time the median size of sets is currently increasing at a faster rate than the stable or decreasing cost metrics. Therefore, the median price of sets is currently increasing. That is, there are more larger and higher priced sets available than ever leading to higher median set prices.
+In summary, inflation adjusted price metrics are decreasing with time implying the price paid per piece or weight in grams of LEGO are currently the cheapest they have ever been. However, the median size of sets is currently increasing at a faster rate than these stable or decreasing cost metrics (adjusted for inflation). This has led to an increase in the median cost of LEGO sets. In short, this leads to higher retail price of sets. Giving the appearance that LEGO has become more expensive.
+
+However, this is purely driven by LEGO releasing more large sets (by weight and by pieces) year on year. So while the retail prices are higher, these LEGO sets also contain more pieces and/or weigh more.
 
 ## Is their a noticeable premium paid on licensed sets?
+
+Another thing I have been curious about is whether there is a discernible price difference between licensed LEGO sets (e.g. Star Wars) and LEGO's own themes (e.g. LEGO City). That is, is there a price premium (bias) passed onto the customer to cover the additional costs of LEGO purchasing the licensing. It is well known that LEGO was in dire financial trouble in the late 1990's, rescued in no small part by purchasing and releasing licensed sets such as Star Wars and Harry Potter. 
+
+To investigate this, I return to the same 3yr (2002 - 2024) LEGO set data that I used earlier for investigating the different LEGO price metrics (price per piece and price per weight in grams). I then split this dataset into two smaller datasets, separating licensed themes from unlicensed themes.
+
+For the purposes of this investigation, I have considered the following two sets of licensed/unlicensed sets;
+- **Licensed:** Star Wars, Disney, Marvel and DC, Harry Potter, Minecraft, Super Mario, Jurassic World, Sonic and Avatar
+- **Unlicensed:** City, Creator, Friends, Classic, Dreamzzz, Ninjago, Seasonal, Monkie Kid and Dots
+
+Importantly, I have excluded the Technic, Ideas, Icons, BrickHeadz and LEGO art themes as these ranges can contain a mix of licensed/unlicensed products. While these could be separated, it could easily be more prone to error.
+
+In order to establish whether there is a discernible difference between licensed and unlicensed themes I computed histograms of the PPP and PPW for all sets from themes listed above. Below, in the left panel I have the two histograms from the unlicensed (blue) and licensed (red) sets for the PPP and in the right panel the histograms for PPW.
 
 <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/piece_licensed.png?raw=true" alt="Licensed sets by PPP" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/weight_licensed.png?raw=true" alt="Licensed sets by PPW" width="465"/> 
 *<small>Distribution of Licensed and Unlicensed sets according to PPP (left) and PPW (right).</small>*
 
-### More detailed look
+Quite clearly, for both cost metrics there is a discernible difference, with licensed sets clearly having higher PPP or PPW metrics (the distributions offset further to the right). The vertical coloured dashed lines denote the median of the two histograms to more easily visualise the difference between licensed and unlicensed sets. According to this, licensed sets have a 23% higher price per piece (3.4 cents) or 21% higher price per weight in grams (2.2 cents).
+
+**Therefore, definitively licensed sets are more expensive**, by about 20%. However, this is not too surprising. I was just curious if it was immediately obvious from the data.
+
+### A more detailed look
+
+Above, we considered just a binary licensed/unlicensed classification for the LEGO sets. However, we can also go deeper and look specifically at individual themes. To do this, I have produced box and whisker plots below for each individual LEGO theme for the PPP (left panel) and the PPW (right panel). Further, I have coloured the themes that were used in the above analysis of licensed (red) and unlicensed (blue). All other themes are represented in black. I have also included the median PPP or PPW of the entire sample, denoted by the grey dashed line.
 
 <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/theme_pieces.png?raw=true" alt="Individual themes by PPP" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/theme_weight.png?raw=true" alt="Individual themes by PPW" width="465"/> 
 *<small>Box and whisker plots showing the distribution of PPP (left panel) and PPW (right panel) for individual LEGO themes over a 3yr period (2022-2024). Blue corresponds to unlicensed sets, red to licensed sets and black to sets not assigned a classification.</small>*
 
+A box and whisker plot is an easy to understand visual representation of a histogram (or probability distribution). The two whiskers (at the two extremes) correspond to the 10 and 90 percentiles of the histogram (that is, include 80% of all sets). The box highlights the central 25th and 75th percentiles (including the central 50% of all sets). The vertical line in the centre of the box is the median. Wide boxes imply broad histograms (large spread) while narrow boxes imply narrow histograms (small spread).
+
+Representing all themes individually in this way, it is clear which sets have higher/lower cost metrics relative to the median of the entire data set. Unsurprisingly, the licensed sets are predominately above the median of the data set (owing to the premium paid that we identified above). The worst culprits being Star Wars, Marvel and Jurassic World.
 
 ## How does the cost of LEGO in Australia compare to other countries?
 
-<img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Country_cost_PPP.png?raw=true" alt="PPP by country" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Country_cost_PPP.png?raw=true" alt="PPW by country" width="465"/> 
-*<small>Insert caption</small>*
+Finally, I thought it would be interesting to see if I could determine whether LEGO is cheaper or more expensive here in Australia. For the data that I extracted from the data sources above, I have seemingly reliable information for the US, UK and Germany back to 2010. I have reliable data way back to 1990 for Australia which was used earlier. 
 
+The way I decided to investigate this was to compare the cost of LEGO sets relative to the median weekly salary. A LEGO set is considered cheap if this ratio is small, as it represents a small fraction of a persons median salary. Conversely, a set is expensive it is a large fraction of a take home salary.
+
+There are two primary advantages for considering the data in this way; (i) this normalises the data across the various currencies as the cost is simply a fraction of a salary, so no longer dependent on foreign exchange rates between different countries and (ii) it essentially adjusts for inflation (taking into account that salaries were smaller in the past).
+
+Importantly, for the figures shown below, the actual numbers on the vertical (y) axis are irrelevant as they are very small quantities (price per piece/gram divided my median salary is a small number). What is relevant, is the amplitude of the line. The lower the line, the cheaper LEGO is in a country.
+
+<img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Country_cost_PPP.png?raw=true" alt="PPP by country" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Country_cost_PPP.png?raw=true" alt="PPW by country" width="465"/> 
+*<small>A metric to quantify how expensive LEGO is between different countries. Measured as the median PPP (left panel) or PPW (right panel) relative to the median weekly salary within each country.</small>*
+
+Note, LEGO sets in Australia (10% GST), the UK (20% VAT) and Germany (19% VAT) have tax included in the retail price of LEGO sets, whereas the US does not (as the sales tax differs on a state by state basis). To account for this, for the US I provide a grey shaded box with the lower bound corresponding to a 0% sales tax and the upper bound being a 10% sales tax.
+
+Immediately, LEGO appears to be more expensive in the UK (red line) than in all other countries I have considered. Primarily this is due to the lower salaries earnt in the UK relative to other countries. LEGO in Germany (blue) and Australia (green and gold, of course!) are fairly comparable, with Germany being marginally lower (cheaper).
+
+LEGO in Germany and Australia appears to be roughly comparable to US states with 5-6% sales tax. Therefore, any US state with lower sales tax will be the cheapest location to purchase LEGO. However, only 10 US states have sales taxes below 5-6%. Therefore, on average purchasing LEGO in the US is more expensive than in Australia or Germany. These conclusions appear to be broadly consistent with an analysis I just [found](https://bricknerd.com/home/which-country-has-the-cheapest-lego-9-28-23), although using a completely different methodology.
+
+In summary, the cost of LEGO in Australia and Germany is fairly comparable, which is cheaper on average than the US and much cheaper than the UK.
 
 ## Contact Information
 
