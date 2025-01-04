@@ -156,7 +156,9 @@ In summary, inflation adjusted price metrics are decreasing with time implying t
 
 ## How does the cost of LEGO in Australia compare to other countries?
 
-Location specific
+<img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Country_cost_PPP.png?raw=true" alt="PPP by country" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Country_cost_PPP.png?raw=true" alt="PPW by country" width="465"/> 
+*<small>Insert caption</small>*
+
 
 ## Contact Information
 
