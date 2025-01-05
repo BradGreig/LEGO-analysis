@@ -3,6 +3,7 @@ theme:
   name: material
   features:
     - toc.integrate
+  custom_dir: overrides
 repo_url: https://bradgreig.github.io/LEGO-analysis/
 plugins: []
 
