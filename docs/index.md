@@ -1,4 +1,6 @@
-<meta name="google-site-verification" content="6qKIMbSG6992o-3QPCs2NBCfMW167KEEbCWGKM8KDPM" />
+{% block extrahead %}
+  <meta name="google-site-verification" content="6qKIMbSG6992o-3QPCs2NBCfMW167KEEbCWGKM8KDPM" />
+{% endblock %}
 
 I am a huge LEGO fan. Being such a fan, a common thing that I hear is that people find purchasing LEGO to be expensive. Following on, people also believe that LEGO has gotten more expensive in recent times.
 
