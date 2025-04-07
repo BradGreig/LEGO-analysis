@@ -22,8 +22,6 @@ For those interested in the details, this analysis is broken into the following:
 - [Is their a noticeable premium paid on licensed sets?](#is-their-a-noticeable-premium-paid-on-licensed-sets)
 - [How does the cost of LEGO in Australia compare to other countries?](#how-does-the-cost-of-lego-in-australia-compare-to-other-countries)
 
-Jupyter Notebooks are provided for re-creating the plots shown within this analysis. For these, please go [here](https://github.com/BradGreig/LEGO-analysis/blob/main/data/Scripts/). 
-
 ## Available data
 
 There are multiple excellent websites hosting databases of historical information about released LEGO sets. For this exploration I have used three main sources; [Brickset](https://brickset.com/), [BrickLink](https://www.bricklink.com/v2/main.page) and [BrickEconomy](https://www.brickeconomy.com/). I have been most familiar with Brickset, which dictated that choice. I found BrickLink had a more comprehensive database when it came to information about a LEGO sets weight. Finally, BrickEconomy had easily obtainable Australian pricing information.
@@ -34,6 +32,7 @@ To explore how the pricing of sets changes over time I decided to compare agains
 
 Across the various LEGO data sources above I had access to Australian, US, UK and German pricing. I grabbed the median salary information for each of these countries from their respective national statistics sources; the Australian Bureau of Statistics ([ABS](https://www.abs.gov.au/)), the US Bureau of Labor Statistics ([BLS](https://www.bls.gov/)), the Office of National Statistics for the UK ([ONS](https://www.ons.gov.uk/])) and the Federal Statistics office for Germany ([Destatis](https://www.destatis.de/EN/Home/_node.html)).
 
+Jupyter Notebooks are provided for re-creating the plots shown within this analysis. For these, please go [here](https://github.com/BradGreig/LEGO-analysis/blob/main/data/Scripts/). 
 
 ## Metrics for analysing the cost of LEGO sets
 
@@ -44,13 +43,13 @@ To investigate these metrics further I compared them for the most recent 3 years
 <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_pieces.png?raw=true" alt="Pieces vs Retail Price" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_weight.png?raw=true" alt="Weight vs Retail Price" width="465"/> 
 *<small>**Left panel:** Scatter plot for 3 years of LEGO sets comparing retail price (\$AUD) and number of pieces in the set. The dashed black line is the measured mean PPP for the entire sample. **Right panel:** Scatter plot for 3 years of LEGO sets comparing retail price ($AUD) and the weight of the set in grams. The dashed black line is the measured mean PPW. </small>*
 
-The reason for both the PPP and PPW being used as a common metric for describing the pricing of LEGO sets can readily be shown by the extremely high correlation coefficients ($\rho$). The correlation coefficient describes how strongly two variables (e.g. retail price and number of pieces) are correlated, with $\rho = 1$ corresponding to perfect correlation and $\rho = 0$ means no correlation. For our two cases, we have $\rho = 0.96$ for PPP and $\rho = 0.98$ for PPW. Both demonstrating almost perfect correlations, with PPW being slightly higher.
+The reason for both the PPP and PPW being used as a common metric for describing the pricing of LEGO sets can readily be shown by the extremely high correlation coefficients ($\rho$). The correlation coefficient describes how strongly two variables (e.g. retail price and number of pieces) are correlated, with $\rho = 1$ corresponding to perfect correlation and $\rho = 0$ means no correlation. For our two cases, we have $\rho = 0.93$ for PPP and $\rho = 0.98$ for PPW. Both demonstrating almost perfect correlations, with PPW being slightly higher.
 
 To visualise the mean PPP and PPW, I have added the black dashed line. This is simply the measured PPP or PPW multiplied by the number of pieces or weight of the set to estimate an expected retail price.
 
 Despite both the PPP and PPW having extremely high correlation coefficients, we can immediately see larger scatter when considering the number of pieces (larger spread of blue points) compared to the weight of the set. To better quantify the level of scatter (or accuracy) of our mean PPP and PPW we can calculate the R$^{2}$ coefficient. This determines how good a fit the black dashed line is to our data. An R$^{2}$ of 1 means a perfect fit.
 
-For our two cases, we find R$^{2}=0.75$ for PPP and R$^{2}=0.90$ for PPW. This immediately demonstrates that using the price per weight (PPW) is the superior metric when analysing LEGO pricing as it is much more accurate at characterising the data.
+For our two cases, we find R$^{2}=0.76$ for PPP and R$^{2}=0.91$ for PPW. This immediately demonstrates that using the price per weight (PPW) is the superior metric when analysing LEGO pricing as it is much more accurate at characterising the data.
 
 Importantly, despite the clear superiority of the PPW over the PPP, throughout the remainder of this analysis I will always provide both for completeness.
 
@@ -65,7 +64,7 @@ To investigate the data deeper, I will calculate the mean price of LEGO sets wit
 
 Here, the red datapoints highlight how the mean retail price varies as the size/weight of the LEGO set increases. On each datapoint I also show the error bar, which highlights the amount of scatter within each bin.
 
-Beginning with the number of pieces in a set (left panel), we can clearly see that using a single metric (PPP) to represent the data is quite poor. As we consider sets with larger pieces, the red datapoints deviate further from the mean PPP. This explains why the R$^{2}$ coefficient was not particularly high (e.g. 0.75). Therefore, a simple PPP is not a very good measure.
+Beginning with the number of pieces in a set (left panel), we can clearly see that using a single metric (PPP) to represent the data is quite poor. As we consider sets with larger pieces, the red datapoints deviate further from the mean PPP. This explains why the R$^{2}$ coefficient was not particularly high (e.g. 0.76). Therefore, a simple PPP is not a very good measure.
 
 On the right hand side, I consider the same for the weight of a LEGO set. Here, the binned data much more closely follows the mean PPW (black dashed curve). This demonstrates why the PPW was a considerably better metric. Further highlighting why the PPW is better, is the considerably smaller error bars (reduced scatter relative to PPP). However, like for the PPP, the binned data clearly deviates by an increasing amount from the mean PPW for increasing set weights. Showing that simple metrics such as PPP or PPW are not universally capable of describing all the data.
 
@@ -89,7 +88,7 @@ where $c$ is a vertical offset.
 
 This functional form is shown as the red dashed lines in the figure above. We can clearly see that this functional form is a much better fit to our data, by following the red data points much more closely (the red line is not fit to the red data points).
 
-By adopting this functional form, the R$^{2}$ for the number of pieces in a set increases from 0.75 to 0.84, demonstrating the considerable improvement achievable. For the weight of the set, R$^{2}$ improves from 0.91 to 0.93. The larger improvement for the number of pieces relative to the weight is simply due to the PPP being considerably worse than the PPW. That is, PPW was already pretty good, so we do not improve as much compared to PPP.
+By adopting this functional form, the R$^{2}$ for the number of pieces in a set increases from 0.76 to 0.84, demonstrating the considerable improvement achievable. For the weight of the set, R$^{2}$ improves from 0.91 to 0.93. The larger improvement for the number of pieces relative to the weight is simply due to the PPP being considerably worse than the PPW. That is, PPW was already pretty good, so we do not improve as much compared to PPP.
 
 ### The downside of increased complexity
 
