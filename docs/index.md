@@ -22,6 +22,8 @@ For those interested in the details, this analysis is broken into the following:
 - [Is their a noticeable premium paid on licensed sets?](#is-their-a-noticeable-premium-paid-on-licensed-sets)
 - [How does the cost of LEGO in Australia compare to other countries?](#how-does-the-cost-of-lego-in-australia-compare-to-other-countries)
 
+Jupyter Notebooks are provided for re-creating the plots shown within this analysis. For these, please go [here](https://github.com/BradGreig/LEGO-analysis/blob/main/data/Scripts/). 
+
 ## Available data
 
 There are multiple excellent websites hosting databases of historical information about released LEGO sets. For this exploration I have used three main sources; [Brickset](https://brickset.com/), [BrickLink](https://www.bricklink.com/v2/main.page) and [BrickEconomy](https://www.brickeconomy.com/). I have been most familiar with Brickset, which dictated that choice. I found BrickLink had a more comprehensive database when it came to information about a LEGO sets weight. Finally, BrickEconomy had easily obtainable Australian pricing information.
@@ -65,7 +67,7 @@ Here, the red datapoints highlight how the mean retail price varies as the size/
 
 Beginning with the number of pieces in a set (left panel), we can clearly see that using a single metric (PPP) to represent the data is quite poor. As we consider sets with larger pieces, the red datapoints deviate further from the mean PPP. This explains why the R$^{2}$ coefficient was not particularly high (e.g. 0.75). Therefore, a simple PPP is not a very good measure.
 
-On the right hand side, I consider the same for the weight of a LEGO set. Here, the binned data much more closely follows the mean PPW (black dashed curve). This demonstrates why the PPW was a considerably better metric. Further highlight why the PPW is better, is the considerably smaller error bars (reduced scatter relative to PPP). However, like for the PPP, the binned data clearly deviates by an increasing amount from the mean PPW for increasing set weights. Showing that simple metrics such as PPP or PPW are not universally capable of describing all the data.
+On the right hand side, I consider the same for the weight of a LEGO set. Here, the binned data much more closely follows the mean PPW (black dashed curve). This demonstrates why the PPW was a considerably better metric. Further highlighting why the PPW is better, is the considerably smaller error bars (reduced scatter relative to PPP). However, like for the PPP, the binned data clearly deviates by an increasing amount from the mean PPW for increasing set weights. Showing that simple metrics such as PPP or PPW are not universally capable of describing all the data.
 
 ### The problem with a single number for a metric
 
