@@ -164,7 +164,7 @@ In order to establish whether there is a discernible difference between licensed
 <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/piece_licensed.png?raw=true" alt="Licensed sets by PPP" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/weight_licensed.png?raw=true" alt="Licensed sets by PPW" width="465"/> 
 *<small>Distribution of Licensed and Unlicensed sets according to PPP (left) and PPW (right).</small>*
 
-Quite clearly, for both cost metrics there is a discernible difference, with licensed sets clearly having higher PPP or PPW metrics (the distributions offset further to the right). The vertical coloured dashed lines denote the median of the two histograms to more easily visualise the difference between licensed and unlicensed sets. According to this, licensed sets have a 23% higher price per piece (3.4 cents) or 21% higher price per weight in grams (2.2 cents).
+Quite clearly, for both cost metrics there is a discernible difference, with licensed sets clearly having higher PPP or PPW metrics (the distributions offset further to the right). The vertical coloured dashed lines denote the median of the two histograms to more easily visualise the difference between licensed and unlicensed sets. According to this, licensed sets have a 21% higher price per piece (3.1 cents) or 21% higher price per weight in grams (2.2 cents).
 
 **Therefore, licensed sets are definitely more expensive**, by about 20%. However, this is not too surprising. I was just curious if it was immediately obvious from the data.
 
