@@ -1,0 +1,571 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>LEGO set cost analysis</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+<meta name="google-site-verification"
+content="6qKIMbSG6992o-3QPCs2NBCfMW167KEEbCWGKM8KDPM" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#available-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="LEGO set cost analysis" class="md-header__button md-logo" aria-label="LEGO set cost analysis" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LEGO set cost analysis
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://bradgreig.github.io/LEGO-analysis/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Bradgreig
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="LEGO set cost analysis" class="md-nav__button md-logo" aria-label="LEGO set cost analysis" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    LEGO set cost analysis
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://bradgreig.github.io/LEGO-analysis/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Bradgreig
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#available-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metrics-for-analysing-the-cost-of-lego-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metrics for analysing the cost of LEGO sets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metrics for analysing the cost of LEGO sets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-deeper-look-at-metrics-involving-pieces-and-weight" class="md-nav__link">
+    <span class="md-ellipsis">
+      A deeper look at metrics involving pieces and weight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-problem-with-a-single-number-for-a-metric" class="md-nav__link">
+    <span class="md-ellipsis">
+      The problem with a single number for a metric
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-downside-of-increased-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      The downside of increased complexity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-lego-set-weight-better-than-the-number-of-pieces-for-estimating-retail-price" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is LEGO set weight better than the number of pieces for estimating retail price?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#has-lego-gotten-more-expensive-over-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Has LEGO gotten more expensive over time?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Has LEGO gotten more expensive over time?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#but-is-that-the-end-of-the-story" class="md-nav__link">
+    <span class="md-ellipsis">
+      But is that the end of the story?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of findings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#is-their-a-noticeable-premium-paid-on-licensed-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is their a noticeable premium paid on licensed sets?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Is their a noticeable premium paid on licensed sets?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-more-detailed-look" class="md-nav__link">
+    <span class="md-ellipsis">
+      A more detailed look
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-the-cost-of-lego-in-australia-compare-to-other-countries" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does the cost of LEGO in Australia compare to other countries?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact Information
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Home</h1>
+
+<p>I am a huge LEGO fan. Being such a fan, a common thing that I hear is that people find purchasing LEGO to be expensive. Following on, people also believe that LEGO has gotten more expensive in recent times.</p>
+<p>For quite some time I have been meaning to delve into available data on the cost of LEGO sets to explore whether it is in fact getting more expensive. Finally I have gotten around to it.</p>
+<p>On this page, I will explore this question and a few others regarding the cost of LEGO. Namely;</p>
+<ul>
+<li><strong>Has LEGO gotten more expensive over time?</strong></li>
+<li><strong>Is their a premium paid on licensed sets (e.g. Star Wars) over unlicensed sets (e.g. Ninjago)?</strong></li>
+<li><strong>Is it cheap or expensive to purchase LEGO in Australia compared to elsewhere?</strong></li>
+</ul>
+<p>For those not overly interested in the deep-dive, the <strong>TL;DR</strong> of these questions are;</p>
+<ul>
+<li><strong>Yes and No</strong>. It depends on how you define it. Individual metrics commonly used such as cost per piece or cost per gram are fairly stable over time (decreasing when adjusted for median weekly salaries). However, the median size of sets has been steadily increasing (both in terms of weight and number of pieces) leading to, on average, higher retail prices for sets.</li>
+<li><strong>Yes!</strong></li>
+<li>Relatively speaking <strong>yes</strong>, although it is cheaper in US states with low sales tax.</li>
+</ul>
+<p>For those interested in the details, this analysis is broken into the following:</p>
+<ul>
+<li><a href="#available-data">Available data</a></li>
+<li><a href="#metrics-for-analysing-the-cost-of-lego-sets">Metrics for analysing the cost of LEGO sets</a></li>
+<li><a href="#has-lego-gotten-more-expensive-over-time">Has LEGO gotten more expensive over time?</a></li>
+<li><a href="#is-their-a-noticeable-premium-paid-on-licensed-sets">Is their a noticeable premium paid on licensed sets?</a></li>
+<li><a href="#how-does-the-cost-of-lego-in-australia-compare-to-other-countries">How does the cost of LEGO in Australia compare to other countries?</a></li>
+</ul>
+<h2 id="available-data">Available data<a class="headerlink" href="#available-data" title="Permanent link">&para;</a></h2>
+<p>There are multiple excellent websites hosting databases of historical information about released LEGO sets. For this exploration I have used three main sources; <a href="https://brickset.com/">Brickset</a>, <a href="https://www.bricklink.com/v2/main.page">BrickLink</a> and <a href="https://www.brickeconomy.com/">BrickEconomy</a>. I have been most familiar with Brickset, which dictated that choice. I found BrickLink had a more comprehensive database when it came to information about a LEGO sets weight. Finally, BrickEconomy had easily obtainable Australian pricing information.</p>
+<p>As this exploration is focused on pricing information, I restricted my dataset to only include sets sold at retail. That is, excluding special sets (gifts with purchase) or BrickLink sets. Further, I also restrict the dataset to sets with a minimum of 100 pieces. Finally, I consider sets from 1990 until 2024. In total, this leads to a dataset of roughly 5500 unique sets.</p>
+<p>To explore how the pricing of sets changes over time I decided to compare against the median salary in Australia (and a few other countries). One could adjust the historical pricing data for inflation using something like the consumer price index, however, I decided instead to use actual salary information. The reason for this choice is that wage growth does not necessarily follow inflation (e.g. inflation is currently outpacing wage growth in Australia). Therefore, by using actual salary information I can effectively compare the cost of LEGO as a fraction of take home salary. Importantly, although I have not checked, I am fairly confident that using inflation instead of salary information would produce fairly similar results.</p>
+<p>Across the various LEGO data sources above I had access to Australian, US, UK and German pricing. I grabbed the median salary information for each of these countries from their respective national statistics sources; the Australian Bureau of Statistics (<a href="https://www.abs.gov.au/">ABS</a>), the US Bureau of Labor Statistics (<a href="https://www.bls.gov/">BLS</a>), the Office of National Statistics for the UK (<a href="https://www.ons.gov.uk/]">ONS</a>) and the Federal Statistics office for Germany (<a href="https://www.destatis.de/EN/Home/_node.html">Destatis</a>).</p>
+<p>Jupyter Notebooks are provided for re-creating the plots shown within this analysis. For these, please go <a href="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Scripts/">here</a>. </p>
+<h2 id="metrics-for-analysing-the-cost-of-lego-sets">Metrics for analysing the cost of LEGO sets<a class="headerlink" href="#metrics-for-analysing-the-cost-of-lego-sets" title="Permanent link">&para;</a></h2>
+<p>When it comes to a metric to accurately quantify the perceived value of a LEGO set, the two common ones that come to mind are: (i) the price per piece (PPP) and (ii) the price per weight (PPW) in grams. These two are simply the retail price of the set divided by either the number of pieces in the set or the total weight of the set in grams.</p>
+<p>To investigate these metrics further I compared them for the most recent 3 years of data (2022 - 2024). By selecting 3 years of data, I can increase the sample size of the sample subset to roughly 1000 sets while limiting the chance of any variation in prices over different years (e.g. due to inflation). For these I consider all themes of LEGO products, not specifically selecting certain themes (I will look into that later). Below, I show scatter plots for the PPP (left) and PPW (right)</p>
+<p><img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_pieces.png?raw=true" alt="Pieces vs Retail Price" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_weight.png?raw=true" alt="Weight vs Retail Price" width="465"/> 
+<em><small></em><em>Left panel:</em><em> Scatter plot for 3 years of LEGO sets comparing retail price ($AUD) and number of pieces in the set. The dashed black line is the measured mean PPP for the entire sample. </em><em>Right panel:</em><em> Scatter plot for 3 years of LEGO sets comparing retail price ($AUD) and the weight of the set in grams. The dashed black line is the measured mean PPW. </small></em></p>
+<p>The reason for both the PPP and PPW being used as a common metric for describing the pricing of LEGO sets can readily be shown by the extremely high correlation coefficients (<span class="arithmatex">\(\rho\)</span>). The correlation coefficient describes how strongly two variables (e.g. retail price and number of pieces) are correlated, with <span class="arithmatex">\(\rho = 1\)</span> corresponding to perfect correlation and <span class="arithmatex">\(\rho = 0\)</span> means no correlation. For our two cases, we have <span class="arithmatex">\(\rho = 0.93\)</span> for PPP and <span class="arithmatex">\(\rho = 0.98\)</span> for PPW. Both demonstrating almost perfect correlations, with PPW being slightly higher.</p>
+<p>To visualise the mean PPP and PPW, I have added the black dashed line. This is simply the measured PPP or PPW multiplied by the number of pieces or weight of the set to estimate an expected retail price.</p>
+<p>Despite both the PPP and PPW having extremely high correlation coefficients, we can immediately see larger scatter when considering the number of pieces (larger spread of blue points) compared to the weight of the set. To better quantify the level of scatter (or accuracy) of our mean PPP and PPW we can calculate the R<span class="arithmatex">\(^{2}\)</span> coefficient. This determines how good a fit the black dashed line is to our data. An R<span class="arithmatex">\(^{2}\)</span> of 1 means a perfect fit.</p>
+<p>For our two cases, we find R<span class="arithmatex">\(^{2}=0.76\)</span> for PPP and R<span class="arithmatex">\(^{2}=0.91\)</span> for PPW. This immediately demonstrates that using the price per weight (PPW) is the superior metric when analysing LEGO pricing as it is much more accurate at characterising the data.</p>
+<p>Importantly, despite the clear superiority of the PPW over the PPP, throughout the remainder of this analysis I will always provide both for completeness.</p>
+<h3 id="a-deeper-look-at-metrics-involving-pieces-and-weight">A deeper look at metrics involving pieces and weight<a class="headerlink" href="#a-deeper-look-at-metrics-involving-pieces-and-weight" title="Permanent link">&para;</a></h3>
+<p>Although we have established that the price per piece is the superior metric, we have done this based only on a single value (the R<span class="arithmatex">\(^{2}\)</span> coefficient). Therefore, it is worth looking deeper into how well these metrics actually perform, and where the differences between the two metrics occur. </p>
+<p>To investigate the data deeper, I will calculate the mean price of LEGO sets within fixed regions (bins) of either 1000 pieces or 1000 grams. Doing so highlights whether there is any variation (evolution) in the data for increasing the number of pieces/weight in a LEGO set. This will also highlight how good or poor a fixed PPP or PPW is. Below, I show this for the number of pieces (left) and set weight (right).</p>
+<p><img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_pieces_corr.png?raw=true" alt="Pieces vs Retail Price Corrected" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/scatter_weight_corr.png?raw=true" alt="Weight vs Retail Price Corrected" width="465"/> 
+<em><small> The same as above, except with the red datapoints highlighting the mean retail price being calculated in regions (bins) seperated by 1000 pieces (left panel) or 1000 grams (right panel). The error bars highlight the scatter within each bin. The red dashed line provides an alternative method to fit the data, using a linear function rather than a single value (e.g. PPP or PPW).</small></em></p>
+<p>Here, the red datapoints highlight how the mean retail price varies as the size/weight of the LEGO set increases. On each datapoint I also show the error bar, which highlights the amount of scatter within each bin.</p>
+<p>Beginning with the number of pieces in a set (left panel), we can clearly see that using a single metric (PPP) to represent the data is quite poor. As we consider sets with larger pieces, the red datapoints deviate further from the mean PPP. This explains why the R<span class="arithmatex">\(^{2}\)</span> coefficient was not particularly high (e.g. 0.76). Therefore, a simple PPP is not a very good measure.</p>
+<p>On the right hand side, I consider the same for the weight of a LEGO set. Here, the binned data much more closely follows the mean PPW (black dashed curve). This demonstrates why the PPW was a considerably better metric. Further highlighting why the PPW is better, is the considerably smaller error bars (reduced scatter relative to PPP). However, like for the PPP, the binned data clearly deviates by an increasing amount from the mean PPW for increasing set weights. Showing that simple metrics such as PPP or PPW are not universally capable of describing all the data.</p>
+<h3 id="the-problem-with-a-single-number-for-a-metric">The problem with a single number for a metric<a class="headerlink" href="#the-problem-with-a-single-number-for-a-metric" title="Permanent link">&para;</a></h3>
+<p>The benefit of a single number metric such as a PPP or PPW is the ease with which it can be interpreted. A single price per piece or gram of LEGO can be easily understood. However, as I have showed, they are not the most accurate when fitting the full range of data. This is because they fundamentally assume that the trends in the data are universal.</p>
+<p>For our data, this is problematic owing to the distribution of LEGO sets. As can be seen from the figures above, the vast majority of sets contain less than 1500 pieces or are less than 2 kg. Therefore, when computing the PPP or PPW, we are effectively calculating a mean PPP for sets less than 1500 pieces and assuming it extends for any number of pieces (equally for the weight). </p>
+<p>To better handle this, we can instead fit the data with a slightly expanded linear function. Theoretically, we could also go to even more complex functions, however, that does not seem necessary given the data. Earlier, when calculating the PPP or PPW we are assuming the following functional form;
+$$
+y = m \times x,
+$$
+where <span class="arithmatex">\(y\)</span> is the retail price, <span class="arithmatex">\(m\)</span> is our PPP or PPW and <span class="arithmatex">\(x\)</span> is the number of pieces or the weight of the set in grams. This function is quite rigid, in only providing one free parameter to determine (e.g. <span class="arithmatex">\(m\)</span>). </p>
+<p>We can simply improve on this by adding an additional variable,
+$$
+y = m \times x + c,
+$$
+where <span class="arithmatex">\(c\)</span> is a vertical offset. </p>
+<p>This functional form is shown as the red dashed lines in the figure above. We can clearly see that this functional form is a much better fit to our data, by following the red data points much more closely (the red line is not fit to the red data points).</p>
+<p>By adopting this functional form, the R<span class="arithmatex">\(^{2}\)</span> for the number of pieces in a set increases from 0.76 to 0.84, demonstrating the considerable improvement achievable. For the weight of the set, R<span class="arithmatex">\(^{2}\)</span> improves from 0.91 to 0.93. The larger improvement for the number of pieces relative to the weight is simply due to the PPP being considerably worse than the PPW. That is, PPW was already pretty good, so we do not improve as much compared to PPP.</p>
+<h3 id="the-downside-of-increased-complexity">The downside of increased complexity<a class="headerlink" href="#the-downside-of-increased-complexity" title="Permanent link">&para;</a></h3>
+<p>Although increasing the complexity of the model improves the fit to the data, which is always preferable, for our study into the evolution of LEGO pricing over the years it will make things a little more difficult to interpret. Rather than following how a single value (PPP or PPW) changes as a function of time (year) we will have to track two properties (the gradient, <span class="arithmatex">\(m\)</span> and the offset, <span class="arithmatex">\(c\)</span>). Secondly, the offset does not have any real meaning. Additionally, while the gradient will still be a measure of price per piece or price per weight (gram), its value will correlate with the offset, <span class="arithmatex">\(c\)</span>, therefore it will not be as clear to interpret.</p>
+<p>As a result, despite improving the fit to the data, for the remainder of this specific analysis I will only consider the simpler PPP or PPW. Maybe in future, I will consider revisiting this will more complexity. Although, I do not think it is really necessary.</p>
+<h3 id="why-is-lego-set-weight-better-than-the-number-of-pieces-for-estimating-retail-price">Why is LEGO set weight better than the number of pieces for estimating retail price?<a class="headerlink" href="#why-is-lego-set-weight-better-than-the-number-of-pieces-for-estimating-retail-price" title="Permanent link">&para;</a></h3>
+<p>Quite simply this is because assuming a fixed price per piece is not a fair representation of the production costs of LEGO. For example, a single 1x1 stud cannot be thought of as costing the same as a 2x4 block or 1x12 Technic beam. In fact, in recent years LEGO has introduced themes (e.g. LEGO Art or Dots), which predominately use only coloured 1x1 studs. Further, Technic sets require a large number of small pins and rods for improving structural integrity. In both cases, this can quickly inflate the piece counts of sets. If a fixed price per piece was used, these sets would be very expensive. </p>
+<p>However, if we use the set weight instead, this normalises for piece size. A set with a large number of small pieces will weigh a lot less than a set with larger pieces. This is why the set weight is a much better metric for estimating LEGO pricing. Heavy sets are more expensive than ligher sets. While sets with large numbers of pieces are not necessarily more expensive.</p>
+<h2 id="has-lego-gotten-more-expensive-over-time">Has LEGO gotten more expensive over time?<a class="headerlink" href="#has-lego-gotten-more-expensive-over-time" title="Permanent link">&para;</a></h2>
+<p>To investigate whether LEGO has gotten more expensive over time, we need to calculate our chosen metrics as a function of LEGO set release year. As outlined earlier, I chose the price per piece (PPP) and price per weight in grams (PPW) as the two metrics for completeness. Although, remember that the PPW is the better metric. </p>
+<p><img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/PPP_per_year.png?raw=true" alt="PPP over time" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/PPW_per_year.png?raw=true" alt="PPW over time" width="465"/> 
+<em><small>Evolution in the price per piece (PPP) or the price per weight in grams (PPW) determined over 35 years of LEGO pricing information. The solid black curve is the determined PPP or PPW whereas the dashed black curve is corrected for historical inflation.</small></em></p>
+<p>Above, the two solid black curves are the median PPP and PPW as a function of year for the 35 years of LEGO pricing information that I selected. Using the raw data, the price per piece (left panel) is fairly stable over time. For the price per weight (right panel) there is a very slight increase over 35 years, but nothing overly substantial. For example, between 2010 and 2024 the PPW has increased 10%. For a 1kg set, that would correspond to an increase of only $10 from $100 to $110. Insignificant compared to inflation which we will see next.</p>
+<p>However, using the raw pricing data over 35 years is not a true representation of the story. We need to take into account inflation, adjusting the price of LEGO over the years to account for the increase of goods and services over time. To estimate the impact of inflation I have chosen to use historical median weekly salary data. The reason for using this is that the cost of LEGO relative to salary data to me is a better representation of how expensive something is. That is, a $100 set in 1990 is a bigger hit to the hip pocket than a $100 set in 2024 owing to the increase in weekly salaries over 35 years (which are supposed to grow in proportion to inflation).</p>
+<p>The inflation corrected PPP and PPW are provided by the black dashed curve in the figure above. <strong>These both conclusively show that over time both the PPP and PPW are decreasing with time. Therefore, according to PPP and PPW metrics, LEGO is cheaper than it has ever been!</strong></p>
+<h3 id="but-is-that-the-end-of-the-story">But is that the end of the story?<a class="headerlink" href="#but-is-that-the-end-of-the-story" title="Permanent link">&para;</a></h3>
+<p>Rather than looking at specific cost metrics, we can also look directly at the median cost of a LEGO set as seen below. The solid black curve is the raw data, whereas the dashed curve is the inflation adjusted median price. In terms of median set cost, we can clearly see an increase over time. In the past 5 years, the median price has gone up from $60 to $80. This corresponds to an increase by 33%.</p>
+<p><img alt="Median set price per year" src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Median_price_peryr.png?raw=true&quot;" />
+<em><small>The median set price as a function of time.</small></em></p>
+<p>With respect to the inflation adjusted median price (dashed curve), it has consistently been decreasing until it becomes fairly stable after 2015 albeit with some sizeable fluctuations year on year. Importantly, there does still appear to be an upswing since 2020. Implying that the increase in set prices since 2020 observed in the unadjusted data is occurring at a rate faster than inflation. <strong>Implying the median LEGO set price is increasing</strong>.</p>
+<p>However, can we establish why it is increasing? We have already looked at the PPW and observed that it gradually increases in time. Now, lets look now at the median set weight as a function of time. This is shown in the left panel below. This oscillates over time, going through peaks and troughs, with two strong peaks in 1996 and 2006 (I have not investigated the sources of these, but they are likely due to smaller numbers of sets released in those years relative to later years). However, it has also steadily increased since 2015. Conveniently, the strong peak in 2006 corresponds in the dip in PPW (see the earlier figure). However, the increase since 2015 in the median set weight overlaps with the increasing PPW.</p>
+<p><img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Median_weight_peryr.png?raw=true" alt="Median set weight over time" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Estimated_cost_peryr.png?raw=true" alt="Estimated cost over time" width="465"/> 
+<em><small>Evolution in the median set weight as a function of time (left panel) and the estimated median set cost obtained by multiplying the PPW by the median set weight.</small></em></p>
+<p>To more clearly understand what is going on, we can estimate a median cost by multiplying this median set weight (left panel above) by our PPW that we calculated earlier. This is shown in the right panel above. This overlaps strongly with our earlier estimated median set price (solid black curve).</p>
+<p>Earlier, we estimated an increase of 33% in the median set price since 2020. Over this period the PPW only increases by just under 10%, however, the median set weight has increased by almost 20%. <strong>Therefore the dominant contributor to the increasing median LEGO set cost is an increasing median set weight over the past 5 or so years.</strong></p>
+<p>Another way to look at this is to investigate the number of sets released year on year above a certain weight. In the left panel below I have created a histogram of all sets above 3kg released since 1990. As can be seen, the number of large sets have considerably increased over the years. Last year alone, there were 23 sets above 3kg.</p>
+<p><img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Histogram_price_peryr.png?raw=true" alt="Number of sets above 3kg" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Percentage_peryr.png?raw=true" alt="Percentage of sets above 3kg" width="465"/> 
+<em><small>The number of sets released each year above 3kg (left panel) and the percentage of all LEGO sets released each year above 3kg (right panel). </small></em></p>
+<p>Rather than the total number of large sets, we can also look at the percentage of large sets (above 3kg) released in a year relative to all sets released in that year. This is shown in the right panel above. Since 2010, the percentage of large sets have steadily increased. Earlier than 2010 the trend is less reliable owing to the considerably fewer sets released in a single year.</p>
+<h3 id="summary-of-findings">Summary of findings<a class="headerlink" href="#summary-of-findings" title="Permanent link">&para;</a></h3>
+<p>Inflation adjusted price metrics are decreasing with time implying the price paid per piece or weight in grams of LEGO are currently the cheapest they have ever been. However, the median size of sets is currently increasing at a faster rate than these stable or decreasing cost metrics (adjusted for inflation). This has led to an increase in the median cost of LEGO sets. In short, this leads to higher retail price of sets. Giving the appearance that LEGO has become more expensive.</p>
+<p>However, this is purely driven by LEGO releasing more large sets (by weight and by pieces) year on year. So while the retail prices are higher, these LEGO sets also contain more pieces and/or weigh more.</p>
+<h2 id="is-their-a-noticeable-premium-paid-on-licensed-sets">Is their a noticeable premium paid on licensed sets?<a class="headerlink" href="#is-their-a-noticeable-premium-paid-on-licensed-sets" title="Permanent link">&para;</a></h2>
+<p>Another thing I have been curious about is whether there is a discernible price difference between licensed LEGO sets (e.g. Star Wars) and LEGO's own themes (e.g. LEGO City). That is, is there a price premium (bias) passed onto the customer to cover the additional costs of LEGO purchasing the licensing. It is well known that LEGO was in dire financial trouble in the late 1990's, rescued in no small part by purchasing and releasing licensed sets such as Star Wars and Harry Potter. </p>
+<p>To investigate this, I return to the same 3yr (2002 - 2024) LEGO set data that I used earlier for investigating the different LEGO price metrics (price per piece and price per weight in grams). I then split this dataset into two smaller datasets, separating licensed themes from unlicensed themes.</p>
+<p>For the purposes of this investigation, I have considered the following two groups of licensed/unlicensed sets;</p>
+<ul>
+<li><strong>Licensed:</strong> Star Wars, Disney, Marvel and DC, Harry Potter, Minecraft, Super Mario, Jurassic World, Sonic and Avatar</li>
+<li><strong>Unlicensed:</strong> City, Creator, Friends, Classic, Dreamzzz, Ninjago, Seasonal, Monkie Kid and Dots</li>
+</ul>
+<p>Importantly, I have excluded the Technic, Ideas, Icons, BrickHeadz and LEGO art themes as these ranges can contain a mix of licensed/unlicensed products. While these could be separated, it could more easily be prone to errors.</p>
+<p>In order to establish whether there is a discernible difference between licensed and unlicensed themes I computed histograms of the PPP and PPW for all sets from the themes listed above. Below, in the left panel I have the two histograms from the unlicensed (blue) and licensed (red) sets for the PPP and in the right panel the histograms for PPW.</p>
+<p><img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/piece_licensed.png?raw=true" alt="Licensed sets by PPP" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/weight_licensed.png?raw=true" alt="Licensed sets by PPW" width="465"/> 
+<em><small>Distribution of Licensed and Unlicensed sets according to PPP (left) and PPW (right).</small></em></p>
+<p>Quite clearly, for both cost metrics there is a discernible difference, with licensed sets clearly having higher PPP or PPW metrics (the distributions offset further to the right). The vertical coloured dashed lines denote the median of the two histograms to more easily visualise the difference between licensed and unlicensed sets. According to this, licensed sets have a 21% higher price per piece (3.1 cents) or 21% higher price per weight in grams (2.2 cents).</p>
+<p><strong>Therefore, licensed sets are definitely more expensive</strong>, by about 20%. However, this is not too surprising. I was just curious if it was immediately obvious from the data.</p>
+<h3 id="a-more-detailed-look">A more detailed look<a class="headerlink" href="#a-more-detailed-look" title="Permanent link">&para;</a></h3>
+<p>Above, we considered just a binary licensed/unlicensed classification for the LEGO sets. However, we can also go deeper and look specifically at individual themes. To do this, I have produced box and whisker plots below for each individual LEGO theme for the PPP (left panel) and the PPW (right panel). Further, I have coloured the themes that were used in the above analysis of licensed (red) and unlicensed (blue). All other themes are represented in black. I have also included the median PPP or PPW of the entire sample, denoted by the grey dashed line.</p>
+<p><img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/theme_pieces.png?raw=true" alt="Individual themes by PPP" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/theme_weight.png?raw=true" alt="Individual themes by PPW" width="465"/> 
+<em><small>Box and whisker plots showing the distribution of PPP (left panel) and PPW (right panel) for individual LEGO themes over a 3yr period (2022-2024). Blue corresponds to unlicensed sets, red to licensed sets and black to sets not assigned a classification.</small></em></p>
+<p>A box and whisker plot is an easy to understand visual representation of a histogram (or probability distribution). The two whiskers (at the two extremes) correspond to the 10 and 90 percentiles of the histogram (that is, these bounds include 80% of all sets). The box highlights the central 25th and 75th percentiles (including the central 50% of all sets). The vertical line in the centre of the box is the median. Wide boxes imply broad histograms (large spread) while narrow boxes imply narrow histograms (small spread).</p>
+<p>Representing all themes individually in this way, it is clear which sets have higher/lower cost metrics relative to the median of the entire data set. Unsurprisingly, the licensed sets are predominately above the median of the data set (owing to the premium paid that we identified above). The most expensive themes being Star Wars, Marvel and Jurassic World.</p>
+<h2 id="how-does-the-cost-of-lego-in-australia-compare-to-other-countries">How does the cost of LEGO in Australia compare to other countries?<a class="headerlink" href="#how-does-the-cost-of-lego-in-australia-compare-to-other-countries" title="Permanent link">&para;</a></h2>
+<p>Finally, I thought it would be interesting to see if I could determine whether LEGO is cheaper or more expensive here in Australia. For the data that I extracted from the data sources above, I have seemingly reliable information for the US, UK and Germany back to 2010. I have reliable data way back to 1990 for Australia which was used earlier. </p>
+<p>The way I decided to investigate this was to compare the cost of LEGO sets relative to the median weekly salary. A LEGO set is considered cheap if this ratio is small, as it represents a small fraction of a persons median salary. Conversely, a set is considered expensive if it is a large fraction of a take home salary.</p>
+<p>There are two primary advantages for considering the data in this way; (i) this normalises the data across the various currencies as the cost is simply a fraction of a salary, so no longer dependent on foreign exchange rates between different countries and (ii) it essentially adjusts for inflation (taking into account that salaries were smaller in the past).</p>
+<p>Importantly, for the figures shown below, the actual numbers on the vertical (y) axis are irrelevant as they are very small quantities (price per piece/gram divided my median salary is a small number). What is relevant, is the trend and amplitude of the line. The lower the line, the cheaper LEGO is in that country.</p>
+<p><img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Country_cost_PPP.png?raw=true" alt="PPP by country" width="465"/> <img src="https://github.com/BradGreig/LEGO-analysis/blob/main/data/Country_cost_PPW.png?raw=true" alt="PPW by country" width="465"/> 
+<em><small>A metric to quantify how expensive LEGO is between different countries. Measured as the median PPP (left panel) or PPW (right panel) relative to the median weekly salary within each country.</small></em></p>
+<p>Note, LEGO in Australia (10% GST), the UK (20% VAT) and Germany (19% VAT) have tax included in the retail price of LEGO sets, whereas the US does not (as the sales tax differs on a state by state basis). To account for this, for the US I provide a grey shaded box with the lower bound corresponding to a 0% sales tax and the upper bound being a 10% sales tax.</p>
+<p>Immediately, LEGO appears to be more expensive in the UK (red line) than in all other countries I have considered. Primarily this is due to the lower salaries earnt in the UK relative to other countries. LEGO in Germany (blue) and Australia (green and gold, of course!) are fairly comparable, with Germany being very marginally lower (cheaper).</p>
+<p>LEGO in Germany and Australia appears to be roughly comparable to US states with 5-6% sales tax. Therefore, any US state with lower sales tax will be the cheapest location to purchase LEGO. However, only 10 US states have sales taxes below 5-6%. Therefore, on average purchasing LEGO in the US is more expensive than in Australia or Germany. These conclusions appear to be broadly consistent with an analysis I just <a href="https://bricknerd.com/home/which-country-has-the-cheapest-lego-9-28-23">found</a>, although using a completely different methodology.</p>
+<p>In summary, the cost of LEGO in Australia and Germany is fairly comparable, which is cheaper on average than the US and much cheaper than the UK.</p>
+<h2 id="contact-information">Contact Information<a class="headerlink" href="#contact-information" title="Permanent link">&para;</a></h2>
+<p>For any questions please contact <a href="mailto:brad.s.greig@gmail.com">Brad Greig</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["toc.integrate"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
